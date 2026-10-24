@@ -6,6 +6,8 @@ import Inicio from "./pages/Inicio";
 import Projeto from "./pages/Projeto";
 import Corrida from "./pages/Corrida";
 import Causa from "./pages/Causa";
+import Suporte from "./pages/Suporte";
+import AdminSuporte from "./pages/AdminSuporte";
 
 const LINK_INSCRICAO =
   "https://docs.google.com/forms/d/e/1FAIpQLSf_pMeoZ0eLuDuzewnOtifTcYfCuEaF82Z-wQS8jvuSw9Y5eg/viewform";
@@ -21,6 +23,7 @@ function Cabecalho() {
         <NavLink to="/projeto">O projeto</NavLink>
         <NavLink to="/corrida">A corrida</NavLink>
         <NavLink to="/causa">Nossa causa</NavLink>
+        <Link to="/suporte">Central de Suporte</Link>
       </nav>
 
       <a
@@ -63,6 +66,8 @@ function App() {
       <Cabecalho />
 
       <Routes>
+        <Route path="/admin/suporte" element={<AdminSuporte />} />
+        <Route path="/suporte" element={<Suporte />} />
         <Route path="/" element={<Inicio />} />
         <Route path="/projeto" element={<Projeto />} />
         <Route path="/corrida" element={<Corrida />} />
