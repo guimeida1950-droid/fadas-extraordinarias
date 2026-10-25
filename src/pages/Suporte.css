@@ -22,6 +22,16 @@
 
 .support-hero h1 {
   margin: 12px 0;
+  max-width: 100%;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.2;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-align: center;
+}
+
+.support-hero h1 span {
+  display: inline;
 }
 
 .support-hero h1 span {
