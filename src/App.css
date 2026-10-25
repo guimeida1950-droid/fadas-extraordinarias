@@ -1100,18 +1100,49 @@ main h2 {
   font-size: 13px;
 }
 
+
 @media (max-width: 760px) {
   .hero {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 28px;
-    padding: 48px 24px;
-    background-position: center;
+
+    min-height: auto;
+    padding: 48px 24px 36px;
+
+    /* Mantém a imagem visível e ajusta o enquadramento */
+    background-size: cover;
+    background-position: 60% center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .countdown-card {
-    justify-self: start;
-    width: 190px;
-    min-height: 150px;
+    align-self: flex-start;
+    width: 180px;
+    min-height: 145px;
+    box-sizing: border-box;
   }
 
   .countdown-number {
