@@ -1149,3 +1149,20 @@ main h2 {
     font-size: 52px;
   }
 }
+
+
+@media (max-width: 760px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+
+    min-height: auto;
+    padding: 48px 24px 36px;
+
+    /* Mantém a imagem visível e ajusta o enquadramento */
+    background-size: cover;
+    background-position: 60% center;
+    background-repeat: no-repeat;
+  }}
