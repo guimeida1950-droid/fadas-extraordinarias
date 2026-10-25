@@ -12,6 +12,9 @@ import AdminSuporte from "./pages/AdminSuporte";
 const LINK_INSCRICAO =
   "https://docs.google.com/forms/d/e/1FAIpQLSf_pMeoZ0eLuDuzewnOtifTcYfCuEaF82Z-wQS8jvuSw9Y5eg/viewform";
 
+const LINK_INSTAGRAM =
+  "https://www.instagram.com/fadas.extraordinarias/";
+
 function Cabecalho() {
   return (
     <header className="navbar">
@@ -51,6 +54,15 @@ function Rodape() {
         <Link to="/projeto">O projeto</Link>
         <Link to="/corrida">A corrida</Link>
         <Link to="/causa">Nossa causa</Link>
+
+        <a
+          href={LINK_INSTAGRAM}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Siga o Fadas Extraordinárias no Instagram"
+        >
+          Instagram ↗
+        </a>
       </div>
 
       <Link className="back-top" to="/">

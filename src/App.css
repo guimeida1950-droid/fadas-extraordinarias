@@ -743,3 +743,21 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-instagram:hover {
+  color: #c13584;
+}
+
+.footer-instagram:focus-visible {
+  outline: 2px solid #c13584;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
