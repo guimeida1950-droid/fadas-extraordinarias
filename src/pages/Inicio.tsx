@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import ContadorCorrida from "../components/ContadorCorrida";
 
 const LINK_INSCRICAO =
   "https://docs.google.com/forms/d/e/1FAIpQLSf_pMeoZ0eLuDuzewnOtifTcYfCuEaF82Z-wQS8jvuSw9Y5eg/viewform";
@@ -7,6 +8,7 @@ const LINK_INSCRICAO =
 export default function Inicio() {
   return (
     <main>
+      {/* HERO: imagem de fundo, apresentação e contador */}
       <section className="hero" id="inicio">
         <div className="hero-content">
           <span className="eyebrow">
@@ -15,18 +17,17 @@ export default function Inicio() {
           </span>
 
           <h1>
-            Cada passo
+            Cada passo por
             <br />
-            por uma causa
+            uma causa
             <br />
             <span>extraordinária.</span>
           </h1>
 
           <p className="hero-description">
-            O Fadas Extraordinárias é uma iniciativa solidária que une
-            pessoas em apoio ao Instituto FADA e ao seu trabalho com
-            pessoas com Transtorno do Espectro Autista (TEA).
-            Participe dessa corrente de inclusão e solidariedade.
+            Mais do que uma corrida, um encontro de pessoas que
+            acreditam na força da solidariedade. Venha fazer
+            parte dessa história com o Instituto FADA.
           </p>
 
           <div className="hero-actions">
@@ -36,7 +37,7 @@ export default function Inicio() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Quero me inscrever <span>↗</span>
+              Inscreva-se agora <span>↗</span>
             </a>
 
             <Link className="secondary-link" to="/projeto">
@@ -47,24 +48,19 @@ export default function Inicio() {
           <div className="hero-note">
             <span className="heart-icon">♡</span>
             <div>
-              <strong>Mais que participar, fazer a diferença</strong>
-              <span>Uma iniciativa de inclusão e solidariedade.</span>
+              <strong>Uma causa que nos une</strong>
+              <span>
+                Cada pessoa faz a diferença.
+              </span>
             </div>
           </div>
         </div>
 
-        <div className="hero-art">
-          <img
-            className="hero-logo"
-            src="/logo-fada.jpeg"
-            alt="Fadas Extraordinárias"
-          />
-          <span className="decorative-star star-one">✦</span>
-          <span className="decorative-star star-two">✧</span>
-          <span className="decorative-flower">✿</span>
-        </div>
+        {/* O contador fica ao lado do texto, sobre a imagem */}
+        <ContadorCorrida />
       </section>
 
+      {/* VALORES */}
       <section className="values-strip">
         <div className="values-heading">
           <h2>Nossos valores</h2>
@@ -75,39 +71,44 @@ export default function Inicio() {
           <span className="value-icon">♡</span>
           <span className="value-number">01</span>
           <h3>Solidariedade</h3>
-          <p>Unidos para apoiar uma causa.</p>
+          <p>Unidos por uma causa.</p>
         </article>
 
         <article className="value-item">
           <span className="value-icon">♧</span>
           <span className="value-number">02</span>
-          <h3>Inclusão</h3>
-          <p>Respeito às diferenças e à diversidade.</p>
+          <h3>Comunidade</h3>
+          <p>Juntos somos mais fortes.</p>
         </article>
 
         <article className="value-item">
           <span className="value-icon">❀</span>
           <span className="value-number">03</span>
           <h3>Transformação</h3>
-          <p>Atitudes que podem gerar impacto positivo.</p>
+          <p>Pequenos passos, grandes impactos.</p>
         </article>
       </section>
 
-      <section className="about-section">
+      {/* SOBRE O PROJETO */}
+      <section className="about-section" id="projeto">
         <div className="about-copy">
-          <span className="eyebrow">CONHEÇA NOSSO PROPÓSITO</span>
+          <span className="eyebrow">
+            CONHEÇA A INICIATIVA
+          </span>
+
           <h2>
-            Uma iniciativa
+            Uma corrida com
             <br />
-            com <span>um propósito especial.</span>
+            um <span>propósito especial.</span>
           </h2>
+
           <p>
-            O Fadas Extraordinárias promove a solidariedade por meio
-            do esporte e direciona a atenção para o trabalho do
-            Instituto FADA com pessoas com Transtorno do Espectro
-            Autista (TEA). Queremos mobilizar a comunidade em torno
-            dessa causa e incentivar mais pessoas a fazer parte dela.
+            Conheça o projeto do Instituto FADA e descubra
+            como você pode participar dessa iniciativa
+            solidária, que busca apoiar pessoas com
+            Transtorno do Espectro Autista (TEA).
           </p>
+
           <Link className="button" to="/projeto">
             Conheça o projeto <span>↗</span>
           </Link>
@@ -116,30 +117,39 @@ export default function Inicio() {
         <div className="about-art">
           <img
             src="/logo-fada.jpeg"
-            alt="Identidade visual do Fadas Extraordinárias"
+            alt="Logo do Instituto FADA"
           />
           <span className="art-caption">
-            Juntos, construímos uma sociedade mais inclusiva.
+            Juntas, vamos mais longe!
           </span>
           <span className="art-decoration">✿</span>
         </div>
       </section>
 
-      <section className="cause-section">
+      {/* CAUSA */}
+      <section className="cause-section" id="causa">
         <div className="cause-copy">
-          <span className="eyebrow">O IMPACTO DA SUA PARTICIPAÇÃO</span>
+          <span className="eyebrow">
+            FAÇA PARTE DESSA HISTÓRIA
+          </span>
+
           <h2>
-            Sua participação
+            O próximo passo
             <br />
-            fortalece <span>essa causa.</span>
+            pode ser <span>o seu.</span>
           </h2>
+
           <p>
-            Ao participar da corrida solidária, você ajuda a dar
-            visibilidade à causa do autismo e a apoiar a iniciativa
-            em benefício do Instituto FADA. Cada participante
-            contribui para levar essa mensagem mais longe.
+            Cada participante ajuda a fortalecer essa
+            iniciativa e a levar a solidariedade mais longe.
+            Participe e ajude a construir uma comunidade
+            mais acolhedora.
           </p>
-          <Link className="button button-light" to="/causa">
+
+          <Link
+            className="button button-light"
+            to="/causa"
+          >
             Conheça nossa causa <span>↗</span>
           </Link>
         </div>
@@ -147,33 +157,33 @@ export default function Inicio() {
         <div className="cause-benefits">
           <article>
             <span className="benefit-icon">♡</span>
-            <p>Apoio ao Instituto FADA</p>
+            <p>Mais união e solidariedade</p>
           </article>
+
           <article>
             <span className="benefit-icon">☆</span>
-            <p>Mais visibilidade para a causa do autismo</p>
+            <p>Apoio a uma causa especial</p>
           </article>
+
           <article>
             <span className="benefit-icon">✧</span>
-            <p>Uma comunidade mais inclusiva e solidária</p>
+            <p>Uma comunidade mais forte</p>
           </article>
         </div>
       </section>
 
-      <section className="race-section">
+      {/* INFORMAÇÕES DA CORRIDA */}
+      <section className="race-section" id="corrida">
         <div className="race-details">
-          <span className="eyebrow">PARTICIPE DESSA INICIATIVA</span>
-          <h2>
-            Faça parte
-            <br />
-            <span>dessa transformação.</span>
-          </h2>
+          <span className="eyebrow">
+            MARQUE NA AGENDA
+          </span>
 
-          <p>
-            Corra, caminhe ou venha apoiar essa iniciativa. O importante
-            é fazer parte de um movimento que une pessoas em torno de
-            uma causa especial.
-          </p>
+          <h2>
+            Corrida
+            <br />
+            <span>Fadas Extraordinárias</span>
+          </h2>
 
           <div className="event-detail">
             <span className="detail-icon">▦</span>
@@ -197,18 +207,20 @@ export default function Inicio() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Garantir minha inscrição <span>↗</span>
+            Faça sua inscrição <span>↗</span>
           </a>
         </div>
 
         <div className="race-message">
           <span className="race-flower">✿</span>
-          <h3>Um movimento que vai além do esporte.</h3>
+
+          <h3>Uma causa, muitos passos.</h3>
+
           <p>
-            Reúna seus amigos, convide sua família e venha demonstrar
-            seu apoio à inclusão e à solidariedade. Cada pessoa que
-            participa ajuda essa causa a alcançar mais pessoas.
+            Prepare-se para fazer parte desse movimento
+            de solidariedade. Cada passo importa!
           </p>
+
           <a
             className="secondary-link"
             href={LINK_INSCRICAO}
