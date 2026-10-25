@@ -761,3 +761,281 @@ button:focus-visible {
   outline-offset: 4px;
   border-radius: 4px;
 }
+
+/* ==========================================
+   CORREÇÃO RESPONSIVA GLOBAL
+   FADAS EXTRAORDINÁRIAS
+   ========================================== */
+
+/* Evita que elementos ultrapassem a tela */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+#root > * {
+  min-width: 0;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* Tablets e telas menores */
+@media (max-width: 950px) {
+  .navbar {
+    gap: 16px;
+    padding-inline: 4%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    overflow-wrap: anywhere;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 5%;
+  }
+
+  .brand img {
+    width: 100px;
+    max-height: 48px;
+    object-fit: contain;
+  }
+
+  .button-header {
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .nav-links {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 8px 18px;
+    padding-top: 12px;
+    border-top: 1px solid #eee5f4;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+    letter-spacing: -0.7px;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+    letter-spacing: -0.4px;
+    overflow-wrap: anywhere;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 48px 5%;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero p {
+    margin-inline: auto;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-actions .button {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    min-height: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+  .cards-grid,
+  .race-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .info-card,
+  .race-detail {
+    min-width: 0;
+    padding: 22px;
+  }
+
+  .page-hero {
+    padding: 55px 5%;
+  }
+
+  .page-section {
+    min-height: auto;
+  }
+
+  .page-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .cta-section {
+    padding: 48px 5%;
+  }
+
+  .footer {
+    padding: 35px 5%;
+  }
+
+  .footer-links {
+    gap: 14px 20px;
+  }
+
+  /* Página de suporte */
+  .support-hero {
+    padding: 45px 5% 32px;
+  }
+
+  .suggestions-card {
+    width: 92%;
+    max-width: 100%;
+    margin: 22px auto;
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .suggestions-info {
+    grid-template-columns: minmax(0, 1fr);
+    width: 92%;
+    gap: 14px;
+  }
+
+  .suggestions-info article {
+    min-width: 0;
+  }
+
+  .suggestions-button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Formulários e campos */
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+
+  /* Evita que palavras ou endereços longos estourem cartões */
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  .info-card,
+  .race-detail {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Celulares estreitos */
+@media (max-width: 380px) {
+  .navbar {
+    padding-inline: 4%;
+    gap: 10px;
+  }
+
+  .brand img {
+    width: 85px;
+  }
+
+  .nav-links {
+    gap: 8px 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.76rem;
+  }
+
+  .button-header {
+    padding: 9px 11px;
+    font-size: 0.76rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .suggestions-card {
+    flex-direction: column;
+  }
+}
